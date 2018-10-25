@@ -34,7 +34,7 @@ void getColor(uint8_t value, char *color, size_t length) {
 			foreground+=2;
 		}
 	}
-	snprintf(color,length,"\033[38;5;%d;48;5;%dm",*foreground,*background);
+	snprintf(color,length,"  \033[38;5;%d;48;5;%dm  ",*foreground,*background);
 }
 
 void drawBoard(uint8_t board[SIZE][SIZE]) {
@@ -73,7 +73,7 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 			printf("       ");
 			printf("%s",reset);
 		}
-		printf("\n");
+		printf("\n\n");
 	}
 	printf("\n");
 	printf("        ←,↑,→,↓ or q        \n");
