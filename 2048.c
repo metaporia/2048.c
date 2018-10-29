@@ -62,7 +62,7 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 				uint8_t t = 7-strlen(s);
 				printf("%*s%s%*s",t-(t/2)-1,"",s,(t/2)+1,"");
 			} else {
-				printf("   ·   ");
+				printf("  ·    ");
 			}
 			printf("%s",reset);
 		}
