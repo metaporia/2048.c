@@ -409,17 +409,22 @@ int main(int argc, char *argv[]) {
 			usleep(150000);
 			addRandom(board);
 			drawBoard(board);
+            // restart on loss
 			if (gameEnded(board)) {
 				printf("         GAME OVER          \n");
-				break;
+				printf("         Restarting         \n");
+				//break;
+                initBoard(board);
 			}
+            drawBoard(board);
 		}
 		if (c=='q') {
-			printf("        QUIT? (y/n)         \n");
-			c=getchar();
-			if (c=='y') {
-				break;
-			}
+            break;
+			//printf("        QUIT? (y/n)         \n");
+			//c=getchar();
+			//if (c=='y') {
+			//	break;
+			//}
 			drawBoard(board);
 		}
 		if (c=='r') {
